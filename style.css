@@ -1,0 +1,219 @@
+:root {
+  --musicala-yellow: #f6de68;
+  --musicala-orange: #f9a826;
+  --musicala-blue: #7ec8e3;
+  --musicala-pink: #f8a5c2;
+  --musicala-green: #b0e57c;
+  --musicala-bg: #fff9ee;
+  --card-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  --border-radius: 18px;
+  --transition-fast: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Neue', Arial, sans-serif;
+  background-color: var(--musicala-bg);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* ===== FONDO ===== */
+.fondo-escenario img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* ===== LOGO ===== */
+.logo-musicala {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  z-index: 10;
+}
+
+/* ===== INSTRUMENTOS ===== */
+.instrumentos-arriba { position: relative; }
+.instrumento {
+  position: fixed;
+  top: 20px;
+  width: 60px;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  animation: slideDown 0.8s ease forwards;
+}
+.instrumento:hover { transform: scale(1.08); }
+.instrumento-xilofono { left: 22%; animation-delay: 0.2s; }
+.instrumento-piano    { left: 36%; animation-delay: 0.4s; }
+.instrumento-flauta   { left: 50%; transform: translateX(-50%); animation-delay: 0.6s; }
+.instrumento-ukelele  { right: 22%; animation-delay: 0.8s; }
+
+@keyframes slideDown { from {transform:translateY(-40px); opacity:0;} to {transform:translateY(0); opacity:1;} }
+
+/* ===== MUSI ===== */
+.musi {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  z-index: 999;
+  animation: fadeInFloat 1.2s ease both, flotar 3s ease-in-out infinite;
+}
+.musi img { width: 90px; filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.2)); }
+.mensaje-musi {
+  background: linear-gradient(145deg, #fff 60%, #fffbe6);
+  border: 2px solid var(--musicala-yellow);
+  border-radius: var(--border-radius);
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-top: 6px;
+  box-shadow: var(--card-shadow);
+  color: #333;
+  font-weight: bold;
+}
+@keyframes flotar {0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@keyframes fadeInFloat {0%{opacity:0;transform:translateY(30px);}100%{opacity:1;transform:translateY(0);}}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.contenedor {
+  position: relative;
+  z-index: 3;
+  max-width: 1000px;
+  margin: 130px auto 80px;
+  padding: 30px 20px;
+  background-color: #ffffffee;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+.animar-aparicion { animation: fadeInUp 0.8s ease-in-out both; }
+@keyframes fadeInUp {0%{opacity:0;transform:translateY(30px);}100%{opacity:1;transform:translateY(0);}}
+
+/* ===== TITULOS ===== */
+h1 { text-align:center; font-size:28px; margin-bottom:10px; transition:color .3s; }
+h1:hover { color: var(--musicala-pink); }
+.intro { text-align:center; font-size:16px; color:#555; }
+
+/* ===== GRID DE CANCIONES ===== */
+.canciones-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(110px, 1fr)); /* 6 subcolumnas */
+  gap: 24px;
+  margin-top: 30px;
+  justify-items: center;
+}
+
+/* Cada tarjeta ocupa 2 subcolumnas */
+.cancion-card { grid-column: span 2; }
+
+/* Fila 1 (3 arriba) */
+.canciones-grid > :nth-child(1){ grid-column: 1 / span 2; }
+.canciones-grid > :nth-child(2){ grid-column: 3 / span 2; }
+.canciones-grid > :nth-child(3){ grid-column: 5 / span 2; }
+
+/* Fila 2 (centradas más a la izquierda) */
+.canciones-grid > :nth-child(4){ grid-column: 2 / span 2; }
+.canciones-grid > :nth-child(5){ grid-column: 4 / span 2; }
+
+/* ===== TARJETAS ===== */
+.cancion-card {
+  background-color: var(--musicala-yellow);
+  border: none;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  box-shadow: var(--card-shadow);
+  color: #333;
+  text-align: center;
+  width: 100%;
+  max-width: 360px;
+}
+.cancion-card:hover { animation:bounce 0.5s ease; background-color:var(--musicala-orange); color:white; }
+.cancion-card.clicked { background-color: var(--musicala-pink); transform: scale(0.98); }
+
+@keyframes bounce {0%{transform:scale(1);}30%{transform:scale(1.05);}50%{transform:scale(0.97);}70%{transform:scale(1.03);}100%{transform:scale(1);}}
+
+/* ===== CONTENIDO DE CADA CANCIÓN ===== */
+.tab-content {
+  display:none;
+  margin-top:30px;
+  padding:20px;
+  background:#fff;
+  border-radius:var(--border-radius);
+  box-shadow:var(--card-shadow);
+  animation: fadeIn 0.4s ease-in-out;
+}
+.tab-content.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* ===== VISUAL DE BOLITAS ===== */
+.cancion-colores{margin-top:40px;text-align:center;position:relative;overflow:visible;z-index:1;}
+.cancion-colores h2{font-size:24px;background:#fff;display:inline-block;padding:6px 20px;color:#ff9900;border-radius:var(--border-radius);box-shadow:var(--card-shadow);margin-bottom:20px;position:relative;z-index:3;}
+.linea{display:flex;justify-content:center;gap:12px;margin:10px 0 4px;position:relative;z-index:3;}
+.color{width:28px;height:28px;border-radius:50%;display:inline-block;}
+.color.amarillo{background:#ffe85c;}
+.color.naranja{background:#fca954;}
+.color.rojo{background:#ff4e4e;}
+.cancion-colores p{font-size:16px;font-weight:bold;letter-spacing:2px;margin:0 0 20px;position:relative;z-index:3;}
+
+/* ===== DECORACIONES ===== */
+.decoracion-img{
+  position:absolute;
+  width:clamp(120px,22vw,200px);
+  opacity:0.95;
+  filter:drop-shadow(0 6px 10px rgba(0,0,0,.15));
+  pointer-events:none;
+  z-index:2;
+  user-select:none;
+  object-fit:contain;
+}
+.decoracion-top-left{top:-10px;left:-10px;transform:rotate(-4deg);}
+.decoracion-top-right{top:-10px;right:-10px;transform:rotate(3deg);}
+.decoracion-bottom-left{bottom:-10px;left:-10px;transform:rotate(2deg);}
+.decoracion-bottom-right{bottom:-10px;right:-10px;transform:rotate(-3deg);}
+
+/* ===== FOOTER ===== */
+footer{text-align:center;margin-top:60px;padding-top:40px;}
+.footer-notas{width:100px;margin:20px auto 10px;display:block;}
+footer p{font-size:14px;color:#666;}
+
+/* ===== MENÚ MUSI ===== */
+.menu-musi{
+  position:fixed;bottom:120px;right:20px;
+  background:#fff;border:2px solid var(--musicala-yellow);
+  border-radius:var(--border-radius);
+  box-shadow:var(--card-shadow);
+  padding:12px;z-index:1000;
+  display:flex;flex-direction:column;gap:10px;
+}
+.menu-musi button{background:var(--musicala-blue);color:#333;font-size:14px;border:none;border-radius:var(--border-radius);padding:8px 12px;cursor:pointer;transition:.3s;}
+.menu-musi button:hover{background:var(--musicala-orange);color:white;}
+.musi-ayuda{position:fixed;bottom:220px;right:20px;width:260px;background:#fff9ee;border:2px solid var(--musicala-green);border-radius:var(--border-radius);padding:14px;box-shadow:var(--card-shadow);font-size:14px;z-index:999;animation:fadeInUp .5s ease;}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .canciones-grid{grid-template-columns:repeat(4,1fr);}
+  .cancion-card{grid-column:span 2;}
+  .canciones-grid > :nth-child(n){grid-column:auto;}
+}
+@media (max-width: 560px){
+  .canciones-grid{grid-template-columns:1fr;}
+  .cancion-card{grid-column:auto;}
+}
+
+/* ===== AUDIOS ===== */
+.audios-instrumentos{margin-top:20px;background:#fffef8;padding:16px;border-radius:var(--border-radius);box-shadow:var(--card-shadow);}
+.audio-item{margin-bottom:15px;font-size:15px;color:#333;}

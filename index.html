@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎶 Musicalitos – Canciones con Notas de Colores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Fondo -->
+  <div class="fondo-escenario">
+    <img src="escenario.jpg" alt="Escenario musical" />
+  </div>
+
+  <!-- Encabezado con logo, instrumentos y Musi -->
+  <header class="header-decorativo">
+    <img src="logo.jpg" alt="Logo Musicala" class="logo-musicala" />
+    <div class="instrumentos-arriba">
+      <img src="xilofono.png" alt="Xilófono" class="instrumento instrumento-xilofono" />
+      <img src="piano.png" alt="Piano" class="instrumento instrumento-piano" />
+      <img src="flauta.png" alt="Flauta" class="instrumento instrumento-flauta" />
+      <img src="ukelele.png" alt="Ukelele" class="instrumento instrumento-ukelele" />
+    </div>
+    <div class="musi" id="musi">
+      <img src="musi.png" alt="Musi la mascota" />
+      <div class="mensaje-musi" id="mensaje-musi">¡Hola! Yo soy Musi y te acompaño a descubrir canciones 🎵</div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="contenedor animar-aparicion">
+    <h1>🎶 Musicalitos – Canciones con Notas de Colores 🎨</h1>
+    <p class="intro">Canciones progresivas con solo 3 notas. Haz clic en una para descubrir su magia musical.</p>
+
+    <!-- Aquí se inyectan los botones desde el JSON -->
+    <section class="canciones-grid" id="botones-canciones"></section>
+
+    <!-- Aquí se inyecta el contenido de cada canción -->
+    <section id="secciones-canciones"></section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <img src="notas.jpg" alt="Notas musicales" class="footer-notas" />
+    <p class="copyright">© 2025 Musicala. Todos los derechos de uso son propiedad de Musicala.</p>
+  </footer>
+
+  <!-- Menú de ayuda de Musi -->
+  <div class="menu-musi" id="menu-musi" style="display: none;">
+    <button onclick="mostrarExplicacion('uso')">❓ ¿Cómo usar esta página?</button>
+    <button onclick="mostrarExplicacion('practica')">🎵 ¿Cómo practicar?</button>
+  </div>
+
+  <!-- Caja de texto de ayuda -->
+  <div class="musi-ayuda" id="musi-ayuda" style="display: none;"></div>
+</body>
+</html>

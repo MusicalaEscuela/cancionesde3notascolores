@@ -1,0 +1,120 @@
+[
+  {
+    "id": "pastelitos",
+    "titulo": "1. Pastelitos",
+    "artista": "Sandra Cires",
+    "guia": "pastelitos.png",
+    "audio": {
+      "xilofono": "pastelitosxilofono.mp3",
+      "piano": "pastelitospiano.mp3",
+      "flauta": "pastelitosflauta.mp3",
+      "ukelele": "pastelitosukelele.mp3"
+    },
+    "decoracion": {
+      "img": "imagenpastelitos.jpg",
+      "posiciones": ["top-left","bottom-right"]
+    },
+    "visual": [
+      { "colores": ["amarillo", "naranja", "rojo"], "texto": " Dos por tres" },
+      { "colores": ["amarillo", "naranja", "rojo"], "texto": " Dos por tres" },
+      { "colores": ["rojo", "rojo", "rojo", "rojo"], "texto": "Pas  te  li  tos" },
+      { "colores": ["naranja", "naranja", "naranja", "naranja"], "texto": "Pas  te  li  tos" },
+      { "colores": ["amarillo", "naranja", "rojo"], "texto": " Dos por tres" }
+    ]
+  },
+  {
+    "id": "ya_lloviendo_está",
+    "titulo": "2. Ya lloviendo está",
+    "artista": "Judith Akoschky",
+    "guia": "yalloviendoesta.png",
+    "audio": {
+      "xilofono": "yalloviendoestaxilofono.mp3",
+      "piano": "yalloviendoestapiano.mp3",
+      "flauta": "yalloviendoestaflauta.mp3",
+      "ukelele": "yalloviendoestaukelele.mp3"
+    },
+    "decoracion": {
+      "img": "imagenyalloviendoesta.jpg",
+      "posiciones": ["top-right"]
+    },
+    "visual": [
+      { "colores": ["amarillo", "amarillo", "naranja", "naranja", "rojo"], "texto": " Ya  llo  vien  do  está" },
+      { "colores": ["amarillo", "amarillo", "naranja", "naranja", "rojo"], "texto": " Ya  llo  vien  do  está" },
+      { "colores": ["amarillo", "naranja", "amarillo", "naranja"], "texto": "¡Mi  ra!  ¡Mi  ra!" },
+      { "colores": ["amarillo", "amarillo", "naranja", "naranja", "rojo"], "texto": " Ya  llo  vien  do  está" }
+    ]
+  },
+  {
+    "id": "din_don_dan",
+    "titulo": "3. Din Don Dan",
+    "artista": "Judith Akoschky",
+    "guia": "dindondan.jpg",
+    "audio": {
+      "xilofono": "dindondanxilofono.mp3",
+      "piano": "dindondanpiano.mp3",
+      "flauta": "dindondanflauta.mp3",
+      "ukelele": "dindondanukelele.mp3"
+    },
+    "decoracion": {
+      "img": "imagendindondan.jpg",
+      "posiciones": ["bottom-left","top-right"]
+    },
+    "visual": [
+      { "colores": ["amarillo", "naranja"], "texto": "Din  don" },
+      { "colores": ["amarillo", "naranja", "rojo"], "texto": "din  don  dan" },
+      { "colores": ["amarillo", "amarillo", "naranja", "naranja"], "texto": "cam  pa  ni  tas" },
+      { "colores": ["amarillo", "naranja", "rojo"], "texto": "so  na  rán" },
+      { "colores": ["amarillo", "naranja"], "texto": "din  don" },
+      { "colores": ["amarillo", "naranja", "rojo"], "texto": "din  don  dan" },
+      { "colores": ["amarillo", "amarillo", "naranja", "naranja"], "texto": "y/a  los  ni  ños" },
+      { "colores": ["amarillo", "naranja", "rojo"], "texto": "dor  mi  rán" }
+    ]
+  },
+  {
+    "id": "con_mi_martillo",
+    "titulo": "4. Con mi martillo",
+    "artista": "Judith Akoschky",
+    "guia": "conmimartillo.png",
+    "audio": {
+      "xilofono": "conmimartilloxilofono.mp3",
+      "piano": "conmimartillopiano.mp3",
+      "flauta": "conmimartilloflauta.mp3",
+      "ukelele": "conmimartilloukelele.mp3"
+    },
+    "decoracion": {
+      "img": "imagenconmimartillo.jpg",
+      "posiciones": ["top-left"]
+    },
+    "visual": [
+      { "colores": ["rojo", "rojo", "naranja", "amarillo", "amarillo"], "texto": "Con  mi  mar  ti  llo" },
+      { "colores": ["amarillo", "naranja", "naranja"], "texto": "mar  ti  llo" },
+      { "colores": ["naranja", "amarillo", "rojo"], "texto": "mar  ti  llo" },
+      { "colores": ["rojo", "rojo", "naranja", "amarillo", "amarillo"], "texto": "Con  mi  mar  ti  llo" },
+      { "colores": ["amarillo", "naranja", "naranja"], "texto": "mar  ti  llo" },
+      { "colores": ["rojo"], "texto": "yo" }
+    ]
+  },
+  {
+    "id": "en_la_batalla",
+    "titulo": "5. En la batalla del calentamiento",
+    "artista": "Judith Akoschky",
+    "guia": "enlabatalla.pdf",
+    "audio": {
+      "xilofono": "enlabatallaxilofono.mp3",
+      "piano": "enlabatallapiano.mp3",
+      "flauta": "enlabatallaflauta.mp3",
+      "ukelele": "enlabatallaukelele.mp3"
+    },
+    "decoracion": {
+      "img": "imagenenlabatalla.jpg",
+      "posiciones": ["bottom-right"]
+    },
+    "visual": [
+      { "colores": ["rojo", "rojo", "naranja", "amarillo", "amarillo"], "texto": "En   la   ba   ta  lla" },
+      { "colores": ["naranja", "rojo", "naranja", "amarillo", "rojo", "rojo"], "texto": "del  ca  len  ta  mien  to" },
+      { "colores": ["rojo", "rojo", "naranja", "amarillo"], "texto": "se/ha ce  sen  tir " },
+      { "colores": ["amarillo", "naranja", "rojo"], "texto": " la  fuer  za" },
+      { "colores": ["naranja", "amarillo", "rojo", "rojo"], "texto": "del  va  lien  te" }
+    ]
+  }
+]
